@@ -239,7 +239,7 @@ class GraphAPI(object):
 
         try:
             response = requests.request(method or "GET",
-                                        FACEBOOK_GRAPH_URL + path,
+                                        FACEBOOK_GRAPH_URL + self.version + "/" + path,
                                         timeout=self.timeout,
                                         params=args,
                                         data=post_args,
